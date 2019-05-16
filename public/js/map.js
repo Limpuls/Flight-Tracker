@@ -1,3 +1,4 @@
+//const axios = require('axios');
 
 
 /*function initMap() {
@@ -51,11 +52,33 @@
 // locate you.
 var map, infoWindow;
 function initMap() {
+var image = "https://en.spitogatos.gr/visualCaptcha/images/airplane.png?fbclid=IwAR2BvfuK8c0yyg82YKsIxvYUhoEeCIznsF7WrS603Ut7Ti_5x1lGKmxIwTI";
+    axios.get('http://localhost:8888/lsapp/public/planes/4baa6f')
+        .then(function (response) {
+            // handle success
+            var cord1 = response.data["states"][0][5];
+            var cord2 = response.data["states"][0][6];
+            var marker = new google.maps.Marker({
+                position: {lat: cord2, lng: cord1},
+                map: map,
+                icon: image
+            })
+        })
+        .catch(function (error) {
+            // handle error
+            console.log(error);
+        })
+        .finally(function () {
+            // always executed
+        });
+
     map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -34.397, lng: 150.644},
+        center: {lat: 54.9065, lng: 25.3189},
         zoom: 6
     });
     infoWindow = new google.maps.InfoWindow;
+
+
 
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
@@ -85,6 +108,9 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         'Error: Your browser doesn\'t support geolocation.');
     infoWindow.open(map);
 }
+
+
+
 
 
 
