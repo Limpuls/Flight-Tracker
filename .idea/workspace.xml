@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef2c6b67-207a-49a8-a314-76b850163f0e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/map.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,11 +27,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159975">
-              <caret line="10665" column="18" selection-start-line="10665" selection-start-column="18" selection-end-line="10665" selection-end-column="18" />
+            <state relative-caret-position="433">
+              <caret line="10665" column="13" selection-start-line="10665" selection-start-column="13" selection-end-line="10665" selection-end-column="13" />
               <folding>
                 <element signature="e#29717#29951#2" expanded="true" />
                 <element signature="e#30843#30996#1" expanded="true" />
@@ -57,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+            <state relative-caret-position="433">
+              <caret line="86" column="1" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -117,8 +119,8 @@
         <option value="$PROJECT_DIR$/resources/js/map.js" />
         <option value="$PROJECT_DIR$/resources/sass/app.scss" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/app.css" />
         <option value="$PROJECT_DIR$/public/js/map.js" />
+        <option value="$PROJECT_DIR$/public/css/app.css" />
       </list>
     </option>
   </component>
@@ -288,12 +290,12 @@
       <option name="presentableId" value="Default" />
       <updated>1557963693250</updated>
       <workItem from="1557963694658" duration="3531000" />
-      <workItem from="1557991409715" duration="1780000" />
+      <workItem from="1557991409715" duration="2289000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5311000" />
+    <option name="totallyTimeSpent" value="5820000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1279" height="722" extended-state="0" />
@@ -344,41 +346,12 @@
     <entry file="file://$PROJECT_DIR$/public/robots.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159975">
-          <caret line="10665" column="18" selection-start-line="10665" selection-start-column="18" selection-end-line="10665" selection-end-column="18" />
-          <folding>
-            <element signature="e#29717#29951#2" expanded="true" />
-            <element signature="e#30843#30996#1" expanded="true" />
-            <element signature="e#31038#31272#1" expanded="true" />
-            <element signature="e#34640#34916#2" expanded="true" />
-            <element signature="e#35835#35988#1" expanded="true" />
-            <element signature="e#36030#36306#1" expanded="true" />
-            <element signature="e#69520#69707#2" expanded="true" />
-            <element signature="e#69962#70098#2" expanded="true" />
-            <element signature="e#70553#70686#2" expanded="true" />
-            <element signature="e#72396#72549#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/app.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -396,10 +369,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/app.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        <state relative-caret-position="433">
+          <caret line="86" column="1" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="10665" column="13" selection-start-line="10665" selection-start-column="13" selection-end-line="10665" selection-end-column="13" />
+          <folding>
+            <element signature="e#29717#29951#2" expanded="true" />
+            <element signature="e#30843#30996#1" expanded="true" />
+            <element signature="e#31038#31272#1" expanded="true" />
+            <element signature="e#34640#34916#2" expanded="true" />
+            <element signature="e#35835#35988#1" expanded="true" />
+            <element signature="e#36030#36306#1" expanded="true" />
+            <element signature="e#69520#69707#2" expanded="true" />
+            <element signature="e#69962#70098#2" expanded="true" />
+            <element signature="e#70553#70686#2" expanded="true" />
+            <element signature="e#72396#72549#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
