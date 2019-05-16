@@ -5,14 +5,17 @@
     var map;
     var infoWindow;
     var options = {
+
+
         center: {lat: -34.397, lng: 150.644},
         zoom: 3
+
     }
 
     map = new google.maps.Map(document.getElementById('map'), options);
 
     var marker = new google.maps.Marker({
-        position: {lat: 42.4668, lng: 70.9495},
+        position: {lat: 54.9065, lng: 25.3189},
         map: map
     })
 
