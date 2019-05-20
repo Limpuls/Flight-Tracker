@@ -13,7 +13,7 @@
     </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="{{ asset('js/map.js') }}"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG1ZfqESpQ4IL3XjW3MTmLepr-dONFf0A&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG1ZfqESpQ4IL3XjW3MTmLepr-dONFf0A&libraries=geometry&callback=initMap"
             async defer></script>
 
 
