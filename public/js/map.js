@@ -56,6 +56,7 @@
 var map, infoWindow;
 function initMap() {
 var image = "https://en.spitogatos.gr/visualCaptcha/images/airplane.png?fbclid=IwAR2BvfuK8c0yyg82YKsIxvYUhoEeCIznsF7WrS603Ut7Ti_5x1lGKmxIwTI";
+    axios.get('http://localhost/server/Laravel_Final_Project/laravel_planes/public/planes/4baa8d')
         .then(function (response) {
             // handle success
             var cord1 = response.data["states"][0][5];
