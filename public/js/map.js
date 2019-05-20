@@ -55,6 +55,7 @@
 // locate you.
 var map, marker1, marker2;
 function initMap() {
+
     var infoWindow = new google.maps.InfoWindow();
     var image = "https://en.spitogatos.gr/visualCaptcha/images/airplane.png?fbclid=IwAR2BvfuK8c0yyg82YKsIxvYUhoEeCIznsF7WrS603Ut7Ti_5x1lGKmxIwTI";
 
@@ -66,6 +67,7 @@ function initMap() {
         {name: 'Styled Map'});
 
     axios.get('http://localhost:8888/lsapp/public/planes/')
+
         .then(function (response) {
             // handle success
             /*while (response) {
