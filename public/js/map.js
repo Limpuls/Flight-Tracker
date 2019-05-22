@@ -57,6 +57,7 @@ var map, marker1, marker2, myLatlng, icon;
 var boo = true;
 var planeIcon;
 function initMap() {
+
     var infoWindow = new google.maps.InfoWindow();
     // Create a new StyledMapType object, passing it an array of styles,
     // and the name to be displayed on the map type control.
@@ -67,6 +68,7 @@ function initMap() {
 setInterval(
 function () {
     axios.get('http://localhost:8888/lsapp/public/planes/')
+
         .then(function (response) {
             var infowindow = new google.maps.InfoWindow();
             var north = new google.maps.LatLng(90.0000, 0.0000);
