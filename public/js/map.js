@@ -64,6 +64,12 @@ function initMap() {
     var styledMapType = new google.maps.StyledMapType(
     [ { "elementType": "geometry", "stylers": [ { "color": "#f5f5f5" } ] }, { "elementType": "labels.icon", "stylers": [ { "visibility": "off" } ] }, { "elementType": "labels.text.fill", "stylers": [ { "color": "#616161" } ] }, { "elementType": "labels.text.stroke", "stylers": [ { "color": "#f5f5f5" } ] }, { "featureType": "administrative.land_parcel", "elementType": "labels.text.fill", "stylers": [ { "color": "#bdbdbd" } ] }, { "featureType": "poi", "elementType": "geometry", "stylers": [ { "color": "#eeeeee" } ] }, { "featureType": "poi", "elementType": "labels.text.fill", "stylers": [ { "color": "#757575" } ] }, { "featureType": "poi.park", "elementType": "geometry", "stylers": [ { "color": "#e5e5e5" } ] }, { "featureType": "poi.park", "elementType": "labels.text.fill", "stylers": [ { "color": "#9e9e9e" } ] }, { "featureType": "road", "elementType": "geometry", "stylers": [ { "color": "#ffffff" } ] }, { "featureType": "road.arterial", "stylers": [ { "visibility": "off" } ] }, { "featureType": "road.arterial", "elementType": "labels.text.fill", "stylers": [ { "color": "#757575" } ] }, { "featureType": "road.highway", "elementType": "geometry", "stylers": [ { "color": "#dadada" } ] }, { "featureType": "road.highway", "elementType": "labels", "stylers": [ { "visibility": "off" } ] }, { "featureType": "road.highway", "elementType": "labels.text.fill", "stylers": [ { "color": "#616161" } ] }, { "featureType": "road.local", "stylers": [ { "visibility": "off" } ] }, { "featureType": "road.local", "elementType": "labels.text.fill", "stylers": [ { "color": "#9e9e9e" } ] }, { "featureType": "transit.line", "elementType": "geometry", "stylers": [ { "color": "#e5e5e5" } ] }, { "featureType": "transit.station", "elementType": "geometry", "stylers": [ { "color": "#eeeeee" } ] }, { "featureType": "water", "elementType": "geometry", "stylers": [ { "color": "#c9c9c9" } ] }, { "featureType": "water", "elementType": "labels.text.fill", "stylers": [ { "color": "#9e9e9e" } ] } ],
         {name: 'Styled Map'});
+    var div = document.createElement("div");
+    div.className += "obj";
+    div.innerHTML += "<h4>" + "data" + "</h4>";
+    //$("div").html("<h2>" + res + "</p>");
+    var bod = document.getElementsByTagName("body")[0];
+    bod.appendChild(div);
 
 setInterval(
 function () {
@@ -130,9 +136,39 @@ function () {
                     return function () {
                         axios.get('http://localhost:8888/lsapp/public/planes/' + response.data["states"][i][0].toLowerCase())
                             .then(function (res) {
-                                console.log(response.data["states"][i][0]);
-                                console.log(res);
-                               
+                                       /* var div = document.createElement("div");
+                                        div.className += "obj";
+                                        div.innerHTML += "<h4>" + res.data + "</h4>";
+                                        //$("div").html("<h2>" + res + "</p>");
+                                        var bod = document.getElementsByTagName("body")[0];
+                                        bod.appendChild(div);*/
+                                if (div) {
+                                    // Get its parent
+                                    parent = div.parentNode;
+
+                                    // Create the new element
+                                    newElement = document.createElement('div');
+
+                                    // Set its ID and content
+                                    newElement.id = "logo";
+                                    newElement.innerHTML = res.data;
+
+                                    // Insert the new one in front of the old one (this temporarily
+                                    // creates an invalid DOM tree [two elements with the same ID],
+                                    // but that's harmless because we're about to fix that).
+                                    parent.insertBefore(newElement, div);
+
+                                    // Remove the original
+                                    parent.removeChild(div);
+                                }
+                                //div.innerHTML += "<h4>" + res.data + "</h4>";
+
+                                //console.log(response.data["states"][i][0]);
+                                //console.log(res);
+                                /*var div = document.createElement("div");
+                                div.innerHTML += "<p>" + res.data + "</p>";
+                                var bod = document.getElementsByTagName("body")[0];
+                                bod.appendChild(div);*/
                             }).catch(function (error) {
                             // handle error
                             console.log(error);
