@@ -142,10 +142,10 @@ function () {
                                         //$("div").html("<h2>" + res + "</p>");
                                         var bod = document.getElementsByTagName("body")[0];
                                         bod.appendChild(div);*/
-                                if (div) {
+                                /*if (div) {
                                     // Get its parent
-                                    parent = div.parentNode;
-
+                                    parent = document.getElementsByTagName("body")[0];
+                                    console.log(parent);
                                     // Create the new element
                                     newElement = document.createElement('div');
 
@@ -160,8 +160,9 @@ function () {
 
                                     // Remove the original
                                     parent.removeChild(div);
-                                }
-                                //div.innerHTML += "<h4>" + res.data + "</h4>";
+                                }*/
+                                div.innerHTML = '';
+                                div.innerHTML += "<h5>" + res.data + "</h5>";
 
                                 //console.log(response.data["states"][i][0]);
                                 //console.log(res);
