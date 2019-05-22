@@ -10,8 +10,8 @@ Error: File to import not found or unreadable: ~bootstrap/scss/bootstrap.
 8: @import '~bootstrap/scss/bootstrap';
 9: 
 10: #map {
-11:     width: 400px;
-12:     height: 100%;
+11:     width: 100%;
+12:     height: 100vh;
 13: }
 
 Backtrace:
@@ -55,4 +55,4 @@ app.scss:8
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: ~bootstrap/scss/bootstrap.\A         on line 8 of app.scss\A \A 3: \A 4: // Variables\A 5: @import 'variables';\A 6: \A 7: // Bootstrap\A 8: @import '~bootstrap/scss/bootstrap';\A 9: \A 10: #map {\A 11:     width: 400px;\A 12:     height: 100%;\A 13: }"; }
+  content: "Error: File to import not found or unreadable: ~bootstrap/scss/bootstrap.\A         on line 8 of app.scss\A \A 3: \A 4: // Variables\A 5: @import 'variables';\A 6: \A 7: // Bootstrap\A 8: @import '~bootstrap/scss/bootstrap';\A 9: \A 10: #map {\A 11:     width: 100%;\A 12:     height: 100vh;\A 13: }"; }
