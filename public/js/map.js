@@ -23,7 +23,7 @@ function initMap() {
 
 setInterval(
 function () {
-    axios.get('http://localhost:8888/lsapp/public/planes/')
+    axios.get('http://api.laimispetravici.us/planes')
 
         .then(function (response) {
             var now = Date.now();
@@ -45,7 +45,7 @@ function () {
 
             for (var i = 0; i < response.data["states"].length; i++) {
                 //console.log(response.data["states"][i]);
-                console.log(response.data["states"][i]);
+                //console.log(response.data["states"][i]);
                 myLatlng = new google.maps.LatLng(response.data["states"][i][6], response.data["states"][i][5]);
                 if (!bounds.contains(myLatlng))
                     continue;
@@ -73,10 +73,15 @@ function () {
                     });
                     google.maps.event.addListener(planeIcon, 'click', (function (planeIcon, i) {
                         return function () {
-                            axios.get('http://localhost:8888/lsapp/public/planes/' + response.data["states"][i][0].toLowerCase())
+                            axios.get('http://api.laimispetravici.us/planes/' + response.data["states"][i][0].toLowerCase())
                                 .then(function (res) {
+
                                     div.innerHTML = '';
-                                    div.innerHTML += "<h5>" + res.data + "</h5>";
+                                    var ob = res.data;
+                                    console.log(ob[0]["icao24"]);
+
+                                    //console.log(res.data);
+                                        div.innerHTML += "<h5>" + ob[0]["manufacturername"] + "</h5>";
                                 }).catch(function (error) {
                                 // handle error
                                 console.log(error);
@@ -126,6 +131,8 @@ function () {
     map.setMapTypeId('styled_map');
 }
 
+document.getElementById("map").style.height = "100vh";
+
 var icon = {
     path: "M 356.26958,135.02702 L 356.26958,249.31026 L 296.72689,289.12758 C 298.37366,285.78981 297.94877,282.22185 297.97085,278.70356 L 297.7704,238.6142 L 268.80878,238.44964 L 269.05561,285.18318 C 269.06227,292.68821 270.04683,297.17053 276.7074,301.30953 L 204.8529,348.4504 C 207.01499,345.12276 206.84863,341.2911 206.84863,337.51874 L 206.77165,295.05645 L 178.71508,294.89191 L 178.6328,342.1191 C 178.84508,349.00225 179.88792,356.28465 186.12004,360.54922 L 30.615857,462.16174 C 3.2664942,481.49054 8.4728732,501.69026 10.293349,521.73054 L 356.26958,404.23849 L 356.26958,582.78033 L 365.64921,648.51992 L 252.92924,731.45549 C 236.829,745.21163 238.89783,759.656 241.98635,773.74604 L 388.44003,735.48708 C 390.1301,775.95885 408.69374,776.66877 411.55996,735.56935 L 558.01364,773.82832 C 561.10216,759.73826 563.17099,745.29391 547.07076,731.53776 L 434.3508,648.6022 L 443.73041,582.86261 L 443.73041,404.32077 L 789.70665,521.73054 C 791.52713,501.6903 796.7335,481.57282 769.38414,462.24402 L 613.87995,360.6315 C 620.11205,356.3669 621.07263,349.08453 621.28491,342.20138 L 621.28491,294.97418 L 593.22834,295.13873 L 593.15851,338.35476 C 593.1282,342.1754 593.2504,345.43211 595.47226,348.97078 L 523.21031,301.39181 C 529.87094,297.25281 530.93773,292.77049 530.94439,285.26546 L 531.19122,238.53192 L 502.22959,238.69647 L 502.02452,278.95408 C 502.0435,282.62018 501.76549,285.90838 503.64551,289.27217 L 443.73041,249.39253 L 443.73041,135.10929 C 429.29576,-9.7066548 372.45267,-10.54689 356.26958,135.02702 z ",
     fillColor: '#111111',
@@ -170,7 +177,3 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 }
 
 */
-
-
-
-

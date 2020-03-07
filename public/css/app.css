@@ -6,7 +6,9 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-
+ #map {
+   height: 60vh;
+ }
 :root {
   --blue: #3490dc;
   --indigo: #6574cd;
@@ -10660,9 +10662,4 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
-}
-
-#map {
-  width: 100%;
-  height: 60vh;
 }
