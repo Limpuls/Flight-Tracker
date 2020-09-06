@@ -11,7 +11,8 @@
 ## Flight tracker 
 ***Laravel + React + Google Maps Project using https://opensky-network.org/ Open Air Traffic API and their public Aircraft dataset***.   
 
-The client is using my own custom written React component library for Google Maps API. 
+The client is using my own custom written React component library for Google Maps API.  
+
 Opensky API is restricted to API calls no more than every 10 seconds, thus the initial 10 second wait on page load and between aircraft updates. 
 
-http://s1.laimispetravici.us/
+### Demo: http://s1.laimispetravici.us/
