@@ -23,7 +23,7 @@ function initMap() {
 
 setInterval(
 function () {
-    axios.get('http://api.laimispetravici.us/planes')
+    axios.get('https://api.laimispetravici.us/planes')
 
         .then(function (response) {
             var now = Date.now();
